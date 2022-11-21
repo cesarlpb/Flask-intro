@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form method="POST" action="/form">
+        <label for="name">¿Cuál es tu nombre?</label><br>
+        <input id="name" type="text" name="name"><br><br>
+        <label for="age">Edad:</label><br>
+        <input id="age" type="number" name="age" placeholder="18">
+        <input type="submit" name="submit" value="Enviar">
+    </form>
+    {% if name and age %}
+        <h1>Hola, {{ name }}</h1>
+        <h2>Tienes {{ age }} año(s).</h2>
+        <p>Esto aparece si recibimos "name"</p>
+    {% endif %}
+    <p>Esto sale siempre</p>
+</body>
+</html>
