@@ -1,7 +1,7 @@
 # Flask-intro
 Proyecto de Flask para aprender a usar el framework
-## Cómo conectar
 
+## Cómo conectar
 1. Instalad la extensión de Code: `Remote-SSH` -> `ms-vscode-remote.remote-ssh`
 2. Clic en botón verde abajo a la izq -> Conectar a Host -> Configurar nuevo host (`.../config`):
 ```
@@ -12,6 +12,15 @@ Proyecto de Flask para aprender a usar el framework
 3. Guardad y salir de config.
 4. Clic en icono y Conectar -> Elegimos host
 5. Aceptar, elegid Linux si pregunta y contraseña para conectar
+
+## Configuración del Git (usuario y email)
+```
+sudo su - tu_usuario
+git config --global user.name “Nombre”
+git config --global user.email tu_email@dominio.com
+git config -- list
+```
+- Ir a un repo > `git pull`
 
 ## Cómo levantar el servidor de desarrollo de Flask
 1. `cd app`
