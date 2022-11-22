@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='/css/bootstrap.min.css') }}>
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='/css/style.css') }}>
-    <title>Docs</title>
+    <title>Flask - Documentación</title>
 </head>
 <body>
     <h1>Documentación de Flask</h1>
         <h2>Documentación Oficial</h2>
         <ul>
-            <li><a href="#"></a>Flask</li>
-            <li><a href="#"></a>Jinja 2</li>
+            <li><a href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank">Flask</a></li>
+            <li><a href="https://jinja.palletsprojects.com/en/3.1.x/" target="_blank">Jinja 2</a></li>
+            <li><a href="https://werkzeug.palletsprojects.com/en/2.2.x/" target="_blank">Werkzeug</a></li>
         </ul>
         <h2>Usuarios en el servidor de desarrollo</h2>
+            <p>Existe el user <code>root</code> al que debemos acceder para ejecutar comandos o instalar paquetes. Usamos <code>root</code> cuando:</code></p>
+            <ul>
+                <li>Conectamos desde VS Code al servidor (por ahora)</li>
+                <li>Ejecutar <code>source bin/activate</code> (por ahora)</li>
+            </ul>
+            Debemos cambiar a nuestro <strong>usuario personal</strong> para todos lo demás, es decir:
+            <ul>
+                <li>Usar comandos de <code>git</code></li>
+                <li>Crear <code>venv</code></li>
+                <li>Navegar y actualizar nuestros proyectos</li>
+            </ul>
         <p>Lorem ipsum dolor sit amet.</p>
         <h2>Pasos para clonar el repositorio</h2>
         <p>Lorem ipsum dolor sit amet.</p>
         <h2>Pasos para ejecutar servidor Flask</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Seguridad</h2>
+        <ul>
+            <li><a href="https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask" target="_blank">url_for() y 'static'</a></li>
+        </ul>
 
 </body>
 </html>
