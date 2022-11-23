@@ -67,3 +67,41 @@ for num in range(2, 101, 2):
 print(pares)
 
 #%% Diccionarios o dict
+# Alumnos y notas
+dic = {"Pepe": 5.0, "María": 7.5, "Juan": 6.75}
+print(type(dic))
+print(dic)
+# print(dic["asas"]) # Como la key no existe en dic -> arroja KeyError
+
+# Frutas
+# Declaramos stock inicial
+inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
+print(f"Stock inicial: {inventario}")
+# Añadimos 100 u a las manzanas
+inventario["manzanas"] += 100
+print(f"Añadimos 100 manzanas: {inventario}")
+# Editamos "peras"
+inventario["peras"] = 0
+print(f"Se agotan las peras: {inventario}")
+print("Antes de eliminar peras:", len(inventario))
+# Si ya no vamos a esperar o usar la entrada la podemos borrar
+del inventario["peras"]
+print(f"Ya no necesitamos la entrada: {inventario}")
+print("Después de eliminar peras:", len(inventario))
+
+#%% 
+inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
+# keys y values de un dict
+print(f"Llaves: {inventario.keys()}")
+print(f"Valores: {inventario.values()}")
+print(type(inventario.keys())) # 
+llaves = list(inventario.keys())    # lista de las keys de inventario
+valores = list(inventario.values()) # lista de los values de inventario
+print(llaves)
+print(valores)
+
+# Iteración con for / in
+print("{")
+for key in inventario:
+    print(f"\t'{key}': '{inventario[key]}'")
+print("}")
