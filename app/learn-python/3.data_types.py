@@ -25,4 +25,45 @@ print(1 + c)
 print(c * 2)
 print(c ** 2)
 
-# Colecciones
+#%% Colecciones
+# Array / lista o list
+arr = [1, 2, 3]
+print(arr)
+print(type(arr))    # list
+
+for el in arr:
+    el += 1
+    print(el)
+#%% Tupla o tuple
+#mi_arr = [1, 2, "3"] # mala idea
+tupla = ("Pepe", 5.0)   # Tupla de alumno (str), nota (float)  
+
+print(tupla)
+print(f"({type(tupla[0])}, {type(tupla[1])})")
+# print(dir(type(tupla[0]))) # podemos ver todas las opciones de una variable con dir
+
+for el in tupla:
+    print(el, type(el))
+
+#%% Rango o range
+ran = range(5, 10)
+print(ran, type(ran))
+# lista de números con range:
+print(list(range(10)))      # Obtenemos los dígitos del 0 al 9
+print(list(range(1, 11)))    # 1 ... 10 
+print(list(range(2, 11, 2))) # pares del 2 al 10
+print(list(range(1, 11, 2))) # impares del 1 al 10
+
+suma = 0
+# colocamos 101 para que se incluya el 100
+for i in range(1, 101):
+    suma += i
+print(suma) # suma del 1 al 100
+
+# Suma de números pares del 1 al 100
+pares = 0
+for num in range(2, 101, 2):
+    pares += num
+print(pares)
+
+#%% Diccionarios o dict
