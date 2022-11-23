@@ -169,10 +169,19 @@ print(5 > 2)
 print(not 5 > 2)
 
 #%% Bytes
-mis_bytes = b"Hello"
-otros_bytes = bytes("Esto se guarda en bytes", "utf8")
+mis_bytes = b"Hello" # declaración + asignación
+otros_bytes = bytes("Esto se guarda en bytes", "utf8") # casting con encoding
+
+# String
 print(type(otros_bytes))
 print(otros_bytes)
 
+print(f"Longitud de str: {len('Esto se guarda en bytes')}")
+print(f"Longitud de bytes: {len(otros_bytes)}")
+
 mi_str = mis_bytes.decode()
 print(type(mi_str))
+
+#%% Ejemplo con bytes
+diez = bytes(10)
+print(diez)
