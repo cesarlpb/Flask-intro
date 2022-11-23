@@ -105,3 +105,33 @@ print("{")
 for key in inventario:
     print(f"\t'{key}': '{inventario[key]}'")
 print("}")
+
+# %% Método clear en dict
+test_dict = {"key1": 1, "key2": 2, "key3": 3}
+print(test_dict)
+test_dict.clear()
+print(test_dict)
+# %% Método items en dict y bucle en lista de tuplas
+inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
+print(inventario.items())
+items = list(inventario.items()) # Creamos una lista con los items
+
+print(items) # items es una lista de tuplas de 'str', int
+# items[0] = ('manzanas', 430)
+for (k,v) in items:
+    print(f"({k}, {v})")
+#%% Operadores in y not in
+inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
+print(f"Hay 'mangos' en inventario? {'mangos' in inventario}")
+print(f"No hay 'mangos' en inventario? {'mangos' not in inventario}")
+#%% Método get() en dict
+inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
+
+print(f"Existe 'bananas' en inventario? {inventario.get('bananas')}")
+print(f"Existe 'mangos' en inventario? {inventario.get('mangos')}")
+
+#%% Método update()
+inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
+temp = {"mangos": 101}
+inventario.update(temp)
+print(inventario)
