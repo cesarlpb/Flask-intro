@@ -135,3 +135,44 @@ inventario = {"manzanas": 430, "bananas": 312, "naranjas": 525, "peras": 217}
 temp = {"mangos": 101}
 inventario.update(temp)
 print(inventario)
+#%% Sets
+mi_set = {"apple", "banana", "cherry", "apple"}
+print(mi_set)
+mi_set.remove("apple")
+print(mi_set)
+print(len(mi_set))
+print(type(mi_set))
+tipo = type(("dato", 1, False)).__name__ # 'tuple' como str
+
+tupla = ("dato", 1, False)
+nuevo_set = set(tupla)
+print(nuevo_set)
+
+#%% Frozenset
+
+x = frozenset({"apple", "banana", "cherry"})
+
+#display x:
+print(x)
+
+# x.remove("apple") # Arroja error
+
+#display the data type of x:
+print(type(x)) 
+
+#%% Boolean
+
+mi_bool = True
+print(mi_bool)
+print(not mi_bool)
+print(5 > 2)
+print(not 5 > 2)
+
+#%% Bytes
+mis_bytes = b"Hello"
+otros_bytes = bytes("Esto se guarda en bytes", "utf8")
+print(type(otros_bytes))
+print(otros_bytes)
+
+mi_str = mis_bytes.decode()
+print(type(mi_str))
