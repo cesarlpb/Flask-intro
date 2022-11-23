@@ -45,3 +45,53 @@ print(x, y, z)
 #%% Desempaquetar una colección
 nums = [1, 2, 3]
 uno, dos, tres = nums
+print(nums)
+print(uno, dos, tres)
+#%% Concatenar
+print("string" + "otro string")
+print("string" + " otro string con espacio")
+print("string1", "string2") # salida con espacios
+#%% Print de operaciones numéricas
+
+# print("1"-1)  # Esto arroja TypeError en Python
+print("1", 1)   # Esto no tiene problema porque no aplica un operando entre tipos
+print( 2 * 3 - 1 )
+print( 2 * (3 - 1) )
+
+#%% Variables Globales
+x = "awesome"
+
+# Función
+def my_func():
+  print("Python is " + x)
+# Fin de función
+
+my_func()
+#%% Variable dentro de función
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()                # fantastic
+
+print("Python is " + x) # "awesome"
+#%% Variable global desde dentro de fun
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+#%% Editar valor de variable global desde dentro de fun
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()    # La fun() reescribe al variable x global
+
+print("Python is " + x) # x es "fantastic"
