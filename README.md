@@ -22,12 +22,32 @@ git config -- list
 ```
 - Ir a un repo > `git pull`
 
-## Cómo levantar el servidor de desarrollo de Flask
+## Cómo levantar el servidor de desarrollo (en consola) de Flask
 1. `cd app`
 2. `source bin/activate` -> Fijaros que el shell ahora tiene **(app)**
 3. `cd src`
 4. `python3 app.py` -> El servidor levanta en un puerto 500X -> del 5000 al 5009
 - `deactivate` para salir del entorno virtual
+
+## Cómo levantar el servidor de desarrollo (en PM2) de Flask
+
+**No instaleis de nuevo node, npm o pm2 en el servidor compartido**
+
+1. Una vez instalados NodeJS, npm y `PM2` global (lo hace el admin), podemos ejecutar los comandos de `pm2`
+2. Navegar a la carpeta donde está `archivo.py` y añadir el proceso a PM2 con:
+```
+pm2 start --name “nombre_de_tu_app 5001” archivo.py --interpreter python3
+```
+    - Indicad el puerto entre el 5001 y el 5009
+    - Personalizad el nombre de la app, ej: "usuario|nombre 5007"
+3. Para ver el listado de procesos: `pm2 ls` o `pm2 list`
+4. Para reiniciar un proceso con id: `pm2 restart id` siendo id el número que aparece en `pm2 ls`
+5. Para detener proceso: `pm2 stop id`
+6. Para ver log de proceso: `pm2 log id`
+
+Más info: [Post oficial](https://pm2.io/blog/2018/09/19/Manage-Python-Processes)
+
+**No instaleis de nuevo node, npm o pm2 en el servidor compartido**
 
 ## Comandos
 
