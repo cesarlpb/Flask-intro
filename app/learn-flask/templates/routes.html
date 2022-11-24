@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routes</title>
+</head>
+<body>
+    <h2>{{ category.upper() }}</h2>
+    <a href="/products/{{category}}/{{id}}">Products >> {{ category }} >> {{ id }}</a>
+    <hr>
+    <a href="/products">Productos</a> >>
+    <a href="/products/{{category}}">{{category.capitalize()}}</a> >>
+    <a href="/products/{{category}}/{{id}}">{{ id }}</a>
+    <hr>
+    <h3>Producto - {{ id }}</h3>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+</body>
+</html>
