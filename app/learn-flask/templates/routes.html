@@ -18,6 +18,7 @@
     <hr>
     <h3>Producto - {{ id }}</h3>
     <hr>
+    {% if category == "" %}
     <table border="1">
         <thead>
             <th>Dato</th>
@@ -25,11 +26,15 @@
         <tbody>
             {% for i in range(10) %}
             <tr>
-                <td>{{ i }} - Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</td>
+                <td>
+                    <a href="#"><h4>Categorías - {{ i }}</h4></a> 
+                    <p><strong>Descripción</strong></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
-        
     </table>
+    {% endif %}
 </body>
 </html>

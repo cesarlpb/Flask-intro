@@ -36,7 +36,7 @@ git config -- list
 1. Una vez instalados NodeJS, npm y `PM2` global (lo hace el admin), podemos ejecutar los comandos de `pm2`
 2. Navegar a la carpeta donde está `archivo.py` y añadir el proceso a PM2 con:
 ```
-pm2 start --name “nombre_de_tu_app 5001” archivo.py --interpreter python3
+pm2 start --name "nombre_de_tu_app 5001" archivo.py --interpreter python3
 ```
     - Indicad el puerto entre el 5001 y el 5009
     - Personalizad el nombre de la app, ej: "usuario|nombre 5007"
