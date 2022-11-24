@@ -45,6 +45,12 @@ pm2 start --name “nombre_de_tu_app 5001” archivo.py --interpreter python3
 5. Para detener proceso: `pm2 stop id`
 6. Para ver log de proceso: `pm2 log id`
 
+### Añadir PM2 como servicio automático en reinicio como root (no ejecutar sin avisar)
+
+1. `pm2 startup` -> añade el servicio de PM2 para empezar tras reinicio
+2. `pm2 save` -> Guarda la lista de los servicios actuales
+[Más info](https://stackoverflow.com/questions/34821063/pm2-startup-not-starting-up-on-ubuntu)
+
 Más info: [Post oficial](https://pm2.io/blog/2018/09/19/Manage-Python-Processes)
 
 **No instaleis de nuevo node, npm o pm2 en el servidor compartido**
