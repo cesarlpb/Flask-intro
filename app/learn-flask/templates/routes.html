@@ -8,14 +8,28 @@
 </head>
 <body>
     <h2>{{ category.upper() }}</h2>
-    <a href="/products/{{category}}/{{id}}">Products >> {{ category }} >> {{ id }}</a>
+    <a href="/products/{{category}}/{{id}}">Products {% if category %} >> {{ category }} {% endif %} >> {{ id }}</a>
     <hr>
     <a href="/products">Productos</a> >>
+    {% if category %}
     <a href="/products/{{category}}">{{category.capitalize()}}</a> >>
+    {% endif %}
     <a href="/products/{{category}}/{{id}}">{{ id }}</a>
     <hr>
     <h3>Producto - {{ id }}</h3>
     <hr>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+    <table border="1">
+        <thead>
+            <th>Dato</th>
+        </thead>
+        <tbody>
+            {% for i in range(10) %}
+            <tr>
+                <td>{{ i }} - Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
 </body>
 </html>
