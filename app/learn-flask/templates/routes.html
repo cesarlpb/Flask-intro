@@ -10,18 +10,20 @@
 </head>
 <body>
     <h2>{{ category.upper() }}</h2>
-    <a href="/products/{{category}}/{{id}}">Products {% if category %} >> {{ category }} {% endif %} >> {{ id }}</a>
+    <a href="/products/{{category}}/{{id}}">Products {% if category %} >> {{ category }} {% endif %} {% if id > 0 %} >> {{ id }}{% endif %}</a>
     <hr>
     <a href="/products">Productos</a> >>
     {% if category %}
     <a href="/products/{{category}}">{{category.capitalize()}}</a> >>
     {% endif %}
-    <a href="/products/{{category}}/{{id}}">{{ id }}</a>
+    <a href="/products/{{category}}/{{id}}"> {% if id > 0 %}{{ id }}{% endif %}</a>
     <hr>
-    <h3>Producto - {{ id }}</h3>
+    <h3>Productos {% if id > 0 %}- {{ id }}{% endif %}</h3>
     <hr>
+
+    <div id="container">
     {% if category == "" %}
-    <table border="1">
+    <table border="1" class="mx-auto">
         <thead>
             <th>Dato</th>
         </thead>
@@ -29,7 +31,7 @@
             {% for i in range(1, 11) %}
             <tr>
                 <td>
-                    <a href="#"><h4>Categorías - {{ i }}</h4></a> 
+                    <a href="#"><h4>Productos - {{ i }}</h4></a> 
                     <p><strong>Descripción</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
                     <img src="./static/images/{{ i }}.png" width="100" alt="pic">
@@ -39,5 +41,7 @@
         </tbody>
     </table>
     {% endif %}
+    </div>
+
 </body>
 </html>
