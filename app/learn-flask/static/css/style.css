@@ -2,7 +2,7 @@ html, body {
     margin: 0;
 }
 body{
-    padding: 5px;
+    padding: 0px;
 }
 table{
     border-collapse: separate;
@@ -16,6 +16,30 @@ tbody, td, tfoot, tr {
 }
 thead, th, thead > tr {
     text-align: center;
+    font-size: 1.5rem;
     border-width: 0!important;
     padding: 5px;
+}
+
+.header{
+    padding: 5px 10px;
+    background-color:burlywood;
+}
+.container-fluid {
+    padding: 10px 0;
+    background-color: bisque;
+}
+.header a {
+    color: whitesmoke;
+}
+body a {
+    color: brown;
+}
+td > div {
+    display: inline-block;
+    width: 49%;
+}
+.img {
+    display: inline-block;
+    width: 49%;
 }

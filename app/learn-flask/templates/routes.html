@@ -9,19 +9,22 @@
     <title>Routes</title>
 </head>
 <body>
-    <h2>{{ category.upper() }}</h2>
-    <a href="/products/{{category}}/{{id}}">Products {% if category %} >> {{ category }} {% endif %} {% if id > 0 %} >> {{ id }}{% endif %}</a>
-    <hr>
-    <a href="/products">Productos</a> >>
-    {% if category %}
-    <a href="/products/{{category}}">{{category.capitalize()}}</a> >>
-    {% endif %}
-    <a href="/products/{{category}}/{{id}}"> {% if id > 0 %}{{ id }}{% endif %}</a>
-    <hr>
-    <h3>Productos {% if id > 0 %}- {{ id }}{% endif %}</h3>
-    <hr>
 
-    <div id="container">
+    <header class="header">
+        <a href="/products">Productos</a> 
+        {% if category %}
+        >>
+        <a href="/products/{{category}}">{{category.capitalize()}}</a> 
+        {% endif %}
+        {% if id > 0 %}
+        >>
+        <a href="/products/{{category}}/{{id}}"> {{ id }}</a>
+        {% endif %}
+        <hr>
+        <h3>Productos {% if id > 0 %}- {{ id }}{% endif %}</h3>
+    </header>
+
+    <div class="container-fluid">
     {% if category == "" %}
     <table border="1" class="mx-auto">
         <thead>
@@ -32,9 +35,13 @@
             <tr>
                 <td>
                     <a href="#"><h4>Productos - {{ i }}</h4></a> 
-                    <p><strong>Descripción</strong></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
-                    <img src="./static/images/{{ i }}.png" width="100" alt="pic">
+                    <h5><strong>Descripción</strong></h5>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                    </div>
+                    <img class="img" src="./static/images/{{ i }}.png" alt="imagen-{{ i }}">
                 </td>
             </tr>
             {% endfor %}
