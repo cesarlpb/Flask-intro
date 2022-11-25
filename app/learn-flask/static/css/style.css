@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+}
+body{
+    padding: 5px;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+tbody, td, tfoot, tr {
+    border-width: 1!important;
+    border: 1px solid black;
+    padding: 10px;
+}
+thead, th, thead > tr {
+    text-align: center;
+    border-width: 0!important;
+    padding: 5px;
+}
