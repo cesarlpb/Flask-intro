@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cargar CSS y Bootstrap -->
     <title>Routes</title>
 </head>
 <body>
@@ -24,12 +25,13 @@
             <th>Dato</th>
         </thead>
         <tbody>
-            {% for i in range(10) %}
+            {% for i in range(1, 11) %}
             <tr>
                 <td>
                     <a href="#"><h4>Categorías - {{ i }}</h4></a> 
                     <p><strong>Descripción</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                    <img src="./static/images/{{ i }}.png" width="100" alt="pic">
                 </td>
             </tr>
             {% endfor %}
