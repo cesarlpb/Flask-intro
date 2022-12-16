@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello():
     return "<h1>Bienvenido a mi app</h1>"
 
+@app.route("/api/<string:name>")
+def api(name):
+    return f"<h1>Bienvenido a mi app, {name}</h1>"
+
 @app.route("/form", methods=["GET", "POST"])
 def form():
     name = None
