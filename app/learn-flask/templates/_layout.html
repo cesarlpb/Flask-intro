@@ -1,0 +1,31 @@
+<!-- _layout.html es una plantilla -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='/css/style.css') }}>
+    <title>Routes</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+          <a href="/" class="d-flex align-items-center justify-content-around mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img class="me-3" src="/static/images/logo-black.png" width="75" alt="logo">
+            <span class="fs-4 d-inline-block ml-5">Mis Productos</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item d-flex align-items-center"><a href="/products" class="nav-link">Productos</a></li>
+            <li class="nav-item d-flex align-items-center"><a href="/products/all" class="nav-link">Categorias</a></li>
+            <!-- <li class="nav-item"><a href="#" class="nav-link">item</a></li> -->
+          </ul>
+        </header>
+      </div>
+    {% block body %}{% endblock %}
+</body>
+</html>

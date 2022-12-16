@@ -1,0 +1,44 @@
+{% extends "_layout.html" %}
+{% block body %}
+<!-- routes.html -> Productos >> Categorias >> Id -->
+    <header class="header d-flex align-items-center justify-content-around flex-wrap justify-content-around py-3 mb-4 me-md-auto">
+        <div class="inline-block">
+        <a href="/products">Productos</a> 
+        {% if category %}
+        >>
+        <a href="/products/{{category}}">{{category.capitalize()}}</a> 
+        {% endif %}
+        {% if id > 0 %}
+        >>
+        <a href="/products/{{category}}/{{id}}"> {{ id }}</a>
+        {% endif %}
+        </div>
+        <h3>Productos {% if id > 0 %}- {{ id }}{% endif %}</h3>
+    </header>
+
+    <div class="container-fluid">
+    {% if true %}
+    <table border="1" class="mx-auto">
+        <thead>
+            <th>Dato</th>
+        </thead>
+        <tbody>
+            {% for i in range(1, 11) %}
+            <tr>
+                <td>
+                    <a href="#"><h4>Productos - {{ i }}</h4></a> 
+                    <h5><strong>Descripción</strong></h5>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sed?</p>
+                    </div>
+                    <img class="img" src="/static/images/{{ i }}.png" alt="imagen-{{ i }}">
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    </div>
+{% endblock %}
